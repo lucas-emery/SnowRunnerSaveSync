@@ -28,6 +28,7 @@ shutil.copy2(target_path, backup_path)
 print('Transfering unlocks')
 target['CompleteSave']['SslValue']['upgradesGiverData'] = source['CompleteSave']['SslValue']['upgradesGiverData']
 target['CompleteSave']['SslValue']['persistentProfileData']['discoveredUpgrades'] = source['CompleteSave']['SslValue']['persistentProfileData']['discoveredUpgrades']
+target['CompleteSave']['SslValue']['persistentProfileData']['unlockedItemNames'] = source['CompleteSave']['SslValue']['persistentProfileData']['unlockedItemNames']
 
 print('Writing updated save')
 with open(target_path, 'w') as file:
